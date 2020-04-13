@@ -26,6 +26,7 @@ function getUser(param) {
     return user
 }
 
+
 module.exports = {
     addUser,
     getUser
