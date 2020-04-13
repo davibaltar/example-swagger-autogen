@@ -6,7 +6,7 @@ let expression = true
 module.exports = function (app) {
 
 	/* NOTE: 100% automatic */
-	app.get('/automatic/user/:id', (req, res) => {
+	app.get('/automatic/users/:id', (req, res) => {
 		res.setHeader('Content-Type', 'application/json')
 		const dataId = users.getUser(req.params.id)
 		const dataObj = users.getUser(req.query.obj)
@@ -17,7 +17,7 @@ module.exports = function (app) {
 	})
 
 	/* NOTE: 100% automatic */
-	app.post('/automatic/user', (req, res) => {
+	app.post('/automatic/users', (req, res) => {
 		res.setHeader('Content-Type', 'application/xml')
 		const data = users.addUser(req.query.obj)
 
@@ -27,7 +27,7 @@ module.exports = function (app) {
 	})
 
 	/* NOTE: Completing informations automaticaly obtaineds */
-	app.get('/automatic_and_incremented/user/:id', (req, res) => {
+	app.get('/automatic_and_incremented/users/:id', (req, res) => {
 		/* 	#swagger.tags = ['User']
 			#swagger.description = 'Endpoint to get the specific user.' */
 		res.setHeader('Content-Type', 'application/json')
@@ -43,7 +43,7 @@ module.exports = function (app) {
 	})
 
 	/* NOTE: Completing informations automaticaly obtaineds */
-	app.post('/automatic_and_incremented/user', (req, res) => {
+	app.post('/automatic_and_incremented/users', (req, res) => {
 		res.setHeader('Content-Type', 'application/xml')
 		/* 	#swagger.tags = ['User']
 			#swagger.description = 'Endpoint to add a user.' */
@@ -65,7 +65,7 @@ module.exports = function (app) {
 	})
 
 	/* NOTE: Function with callback referencied */
-	app.delete('/automatic_and_incremented/user/:id', myFunction1
+	app.delete('/automatic_and_incremented/users/:id', myFunction1
 	/*  #swagger.tags = ['User']
 		#swagger.parameters['id'] = {
 			description: 'User ID.'
@@ -85,10 +85,10 @@ module.exports = function (app) {
 		return res.status(404).send(false)
 	})
 
-	app.patch('/manual/user/:id', (req, res) => {
+	app.patch('/manual/users/:id', (req, res) => {
         /*  #swagger.auto = false
 
-            #swagger.path = '/manual/user/{id}'
+            #swagger.path = '/manual/users/{id}'
 			#swagger.method = 'patch'
 			#swagger.description = 'Endpoint added manually.'
 		    #swagger.produces = ["application/json"]
@@ -168,7 +168,7 @@ function myFunction2(p) {
                 about: ""
             }
     } */
-	const dataObj = users.getUser(req.query.obj)
+	const dataObj = users.getUser(req.body)
 
 	if (expression)
 		return res.status(200).send(true)	// #swagger.responses[200]
