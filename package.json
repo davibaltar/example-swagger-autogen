@@ -2,7 +2,7 @@
   "name": "example-swagger-autogen",
   "version": "1.0.0",
   "description": "Example showing the use of the swagger-autogen module.",
-  "main": "swagger.js",
+  "main": "index.js",
   "readmeFilename": "README.md",
   "private": false,
   "keywords": [
@@ -20,11 +20,12 @@
     "url": "git+https://github.com/davibaltar/example-swagger-autogen.git"
   },
   "scripts": {
-    "start": "node swagger.js"
+    "start": "node index.js",
+    "swagger-autogen": "node swagger.js"
   },
   "dependencies": {
     "express": "^4.17.1",
-    "swagger-autogen": "^1.0.0",
+    "swagger-autogen": "^1.1.2",
     "swagger-ui-express": "^4.1.4"
   }
 }

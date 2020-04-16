@@ -35,12 +35,15 @@ const doc = {
         }
     },
     definitions: {
+        Parents: {
+            father: "Simon Doe",
+            mother: "Marie Doe"
+        },
         User: {
             name: "Jhon Doe",
             age: 29,
             parents: {
-                father: "Simon Doe",
-                mother: "Marie Doe"
+                $ref: '#/definitions/Parents'
             },
             diplomas: [
                 {
