@@ -17,7 +17,7 @@ const bodyParser = require('body-parser')
 /* Server */
 const httpPort = 3000
 http.createServer(app).listen(httpPort)
-console.log("Access the link: http://localhost:%s/doc", httpPort)
+console.log("Server is running!\nAccess the link: http://localhost:3000/doc")
 
 /* Middlewares */
 app.use(bodyParser.json())

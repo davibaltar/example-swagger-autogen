@@ -65,15 +65,7 @@ module.exports = function (app) {
 	})
 
 	/* NOTE: Function with callback referencied */
-	app.delete('/automatic_and_incremented/users/:id', myFunction1
-	/*  #swagger.tags = ['User']
-		#swagger.parameters['id'] = {
-			description: 'User ID.'
-		}
-		
-		#swagger.responses[200]
-		#swagger.responses[404]
-	*/)
+	app.delete('/automatic_and_incremented/users/:id', myFunction1)
 
 	/* NOTE: Will be ignored in the build */
 	app.get('/toIgnore', (req, res) => {
@@ -137,42 +129,10 @@ module.exports = function (app) {
 	})
 }
 
-function myFunction1(p) {
+function myFunction1(req, res) {
 	const dataId = users.getUser(req.params.id)
 
 	if (expression)
 		return res.status(200).send(true)
 	return res.status(404).send(false)
-}
-
-function myFunction2(p) {
-	// #swagger.start
-
-	/*
-		#swagger.path = '/forcedEndpoint/{id}'
-		#swagger.method = 'put'
-		#swagger.description = 'Forced endpoint.'
-		#swagger.produces = ["application/json"]
-	*/
-
-	/*  #swagger.parameters['id'] = { in: 'path', description: 'User ID.' } */
-	const dataId = users.getUser(req.params.id)
-
-	/*	#swagger.parameters['obj'] = { 
-			in: 'body',
-			description: 'User information.',
-			type: 'object',
-			schema: {
-                $name: "Jhon Doe",
-                $age: 29,
-                about: ""
-            }
-    } */
-	const dataObj = users.getUser(req.body)
-
-	if (expression)
-		return res.status(200).send(true)	// #swagger.responses[200]
-	return res.status(404).send(false)		// #swagger.responses[404]
-
-	// #swagger.end
 }
