@@ -1,5 +1,11 @@
 # example-swagger-autogen
 
+Install the dependencies:
+
+```bash
+$ npm install
+```
+
 Run the project and access the documentation at:
 
 [http://localhost:3000/doc](http://localhost:3000/doc)
