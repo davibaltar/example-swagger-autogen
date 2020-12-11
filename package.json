@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "swagger-autogen": "node swagger.js"
+    "start-gendoc": "node swagger.js"
   },
   "dependencies": {
     "express": "^4.17.1",
