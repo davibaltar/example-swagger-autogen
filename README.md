@@ -6,10 +6,6 @@ Install the dependencies:
 $ npm install
 ```
 
-Run the project and access the documentation at:
-
-[http://localhost:3000/doc](http://localhost:3000/doc)
-
 Use the command below to generate the documentation at project startup:
 
 ```bash
@@ -22,8 +18,12 @@ Use the command below to start the project without generating the documentation:
 $ npm start
 ```
 
+Run the project and access the documentation at:
+
+[http://localhost:3000/doc](http://localhost:3000/doc)
+
 ## Screenshots
-See the result after construction in the image below:
+See the result after construction:
 
 ![](https://raw.githubusercontent.com/davibaltar/public-store/master/screen-swagger-autogen-small.png)
 
