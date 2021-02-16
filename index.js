@@ -5,23 +5,22 @@
  * $ npm start
  *
  * Use the command below to generate the documentation at project startup:
- * $ npm run swagger-autogen
+ * $ npm run start-gendoc
  */
 
-const app = require('express')()
-const http = require('http')
 const swaggerUi = require('swagger-ui-express')
 const swaggerFile = require('./swagger_output.json')
 const bodyParser = require('body-parser')
-
-/* Server */
-const httpPort = 3000
-http.createServer(app).listen(httpPort)
-console.log("Server is running!\nAccess the link: http://localhost:3000/doc")
+const express = require('express')
+const app = express()
 
 /* Middlewares */
 app.use(bodyParser.json())
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+
+app.listen(3000, () => {
+  console.log("Server is running!\nAPI documentation: http://localhost:3000/doc")
+})
 
 /* Endpoints */
 require('./src/endpoints')(app)

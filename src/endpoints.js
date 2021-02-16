@@ -52,7 +52,6 @@ module.exports = function (app) {
                 in: 'body',
                 description: 'User information.',
                 required: true,
-                type: 'object',
                 schema: { $ref: "#/definitions/AddUser" }
         } */
         const data = users.addUser(req.body)
