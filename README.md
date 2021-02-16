@@ -25,11 +25,8 @@ Run the project and access the documentation at:
 ## Screenshots
 See the result after construction:
 
-![](https://raw.githubusercontent.com/davibaltar/public-store/master/screen-swagger-autogen-small.png)
+![](https://raw.githubusercontent.com/davibaltar/public-store/master/screen-swagger-autogen.png)
 
----
-
-![](https://raw.githubusercontent.com/davibaltar/public-store/master/screen-swagger-autogen-cut.png)
 
 ## License
-[MIT] (LICENSE) License
+[MIT](LICENSE) License
