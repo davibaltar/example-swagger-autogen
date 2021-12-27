@@ -36,9 +36,7 @@ config/runtime.yaml
 
 .vscode
 draft
-rascunho.js
 package-lock.json
 test/env.js
 .DS_Store
-swagger_output_aux.json
 tests
