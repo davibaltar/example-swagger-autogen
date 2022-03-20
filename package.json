@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "swagger-autogen": "^2.18.8",
+    "swagger-autogen": "^2.20.0",
     "swagger-ui-express": "^4.1.4"
   }
 }
